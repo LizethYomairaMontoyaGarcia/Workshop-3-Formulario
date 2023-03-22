@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Formulario</title>
+  </head>
+
+  <body>
+    <h1><strong> Formulario de Productos</strong></h1>
+    <form id="form" , name="form">
+      <label for="nameProduct">Nombre del producto: </label>
+      <input type="text" id="nameProduct" required />
+      <br />
+      <label for="priceProduct">Precio del producto: </label>
+      <input type="number" id="" required />
+      <br />
+      <label for="quantityProduct">Cantidad del producto: </label>
+      <input type="number" id="quantityProduct" required />
+      <br />
+      <label for="categoryProduct">Categoria del producto: </label>
+      <select id="categoryProduct">
+        <option value="Alimentos">Alimentos</option>
+        <option value="Bebidas">Bebidas</option>
+        <option value="Hogar">Hogar</option>
+        <option value="Electrónicos">Electrónicos</option>
+      </select>
+      <br />
+      <button type="submit">Agregar producto</button>
+    </form>
+
+    <section class="table__section">
+      <table id="mainTable" border="1">
+        <tr>
+          <th>Nombre del producto</th>
+          <th>Precio del producto</th>
+          <th>Cantidad del producto</th>
+          <th>Categoría del producto</th>
+          <th>Acción</th>
+        </tr>
+      </table>
+    </section>
+    <script src="javascript.js"></script>
+  </body>
+</html>
