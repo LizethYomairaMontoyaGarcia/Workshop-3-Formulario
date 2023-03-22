@@ -1,11 +1,12 @@
 const arrayProduct = [];
-document.getElementById('mainTable').style.display = 'none'
+document.getElementById('mainTable')
 const form = document.querySelector('.form');
-form.addEventListener('submit', inputProduct)
+
+//form.addEventListener('submit', inputProduct)
 
 
 function inputProduct(prevenirEvento){
-    document.getElementById('').style.display = ''
+    document.getElementById('')
     prevenirEvento.preventDefault();
     let nameProduct = document.getElementById('nameProduct').value;
     let priceProduct = document.getElementById('priceProduct').value;
@@ -24,6 +25,7 @@ function inputProduct(prevenirEvento){
     console.log(arrayProduct);
 
     let addProduct = document.getElementById('mainTable').insertRow(1);
+
     let newNameProduct = addProduct.insertCell(0);
     newNameProduct.textContent = nameProduct;
 
@@ -36,16 +38,19 @@ function inputProduct(prevenirEvento){
     let newCategoryProduct = addProduct.insertCell(3);
     newCategoryProduct.textContent = categoryProduct;
 
-    let editar = addProduct.insertCell(4);
-    let botonEditar = document.createElement('button');
-    botonEditar.textContent = 'Editar';
-    editar.appendChild(botonEditar);
-    botonEditar.addEventListener('click', () => editProduct(addProduct));
+    //editar formulario
+    let edit = addProduct.insertCell(4);
+
+    let buttonEdit = document.createElement('button');
+    buttonEdit.textContent = 'Edit';
+    edit.appendChild(buttonEdit);
+    buttonEdit.addEventListener('click', () => editProduct(addProduct));
     
-    let botonEliminar = document.createElement('button');
-    botonEliminar.textContent = 'Eliminar';
-    editar.appendChild(botonEliminar);
-    botonEliminar.addEventListener('click', () => eliminateProduct(addProduct));
+    //borrar formulario
+    let buttonEliminate = document.createElement('button');
+    buttonEliminate.textContent = 'eliminate';
+    edit.appendChild(buttonEliminate);
+    buttonEliminate.addEventListener('click', () => eliminateProduct(addProduct));
 
 };
 
